@@ -42,6 +42,11 @@ public class Student extends Human {
 
     }
 
+    public String toString(){ // To String method which print the data in memory rather than address of the memory
+
+        return String.format(" Student : { Name : %s, Age = %o, GPA = %f }", getName(),getAge(),getGPA());
+    }
+
 
 
 

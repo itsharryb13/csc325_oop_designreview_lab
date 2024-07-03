@@ -13,6 +13,6 @@ public class Freshman extends Student{
 
     public String toString(){ // To String method which print the data in memory rather than address of the memory
         // format the string to limit the use of concat and quotation marks
-        return String.format(" Senior : { Name : %s, Age = %o, GPA = %d, Credits = %o", getName(),getAge(),getGPA(),credits);
+        return String.format(" Freshman: { Name : %s, Age = %o, GPA = %f, Credits = %d }", getName(),getAge(),getGPA(),credits);
     }
 }

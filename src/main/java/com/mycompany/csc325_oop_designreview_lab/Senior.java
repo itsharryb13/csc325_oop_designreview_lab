@@ -2,7 +2,7 @@ package com.mycompany.csc325_oop_designreview_lab;
 
 public class Senior extends Student {
     //Minimum credits variable to get output the set minimum value
-    private final int minCredits = 85; // created field for minimum credits
+    private static final int minCredits = 85; // created field for minimum credits
 
 
     // Declaring the variable to store the input credit value
@@ -13,14 +13,13 @@ public class Senior extends Student {
         this.credits = credits; // initializing the variable
 
         if ( credits < minCredits){ // making the needed comparison to be at least 85 credits.
-            throw new IllegalArgumentException("Senior must have atLeast " +minCredits + " Credits." );
+            throw new IllegalArgumentException("Senior must have atLeast " + minCredits + " Credits." );
         }
 
     }
 
     public String toString(){ // To String method which print the data in memory rather than address of the memory
-        String output = String.format(" Senior : { Name : %s, Age = %o, GPA = %d, Credits = %o", getName(),getAge(),getGPA(),credits);
 
-        return output;
+        return String.format(" Senior : { Name : %s, Age = %o, GPA = %f, Credits = %d }", getName(),getAge(),getGPA(), credits);
     }
 }

@@ -4,41 +4,48 @@
 
 package com.mycompany.csc325_oop_designreview_lab;
 
+import java.util.Scanner;
+
 /**
  *
  * @author MoaathAlrajab
  */
 public class MainClass {
 
- public static void main(String[] args) {
-		// ToDo 5: Fix the error
+ 	public static void main(String[] args) {
 
-		// ToDo 6: Fix the constructor of the Student class
+		// Fixed by adding variable type for age
+		Student std = new Student("James", (short) 20);
+		// Fixed by adding variable type for age and change the name to correct constructor class and structure ( Student => Freshmen)
+		Freshman std1 = new Freshman("James", (short) 20, 12);
+		// Fixed by adding variable type for age and change the name to correct constructor class and structure (Student => Senior)
+		Senior std2 = new Senior("John", (short) 30, 90);
 
-                // Todo 7: Create two classes for Freshman and Senior 
+		//Initializing the Scanner to take an input for GPA
+		Scanner srn = new Scanner(System.in);
 
-                // ToDo 8: The senior class should have a minimum of 85 credits  
+		//for student
+		System.out.print("Enter GPA for student " + std.getName() + ": ");
+		std.setGPA(srn.nextDouble()); // stores the gpa by calling the set method
+		System.out.println(std); // prints the toString for student
 
-		// ToDo 9: Add a toString method for the Student class
-		// ToDo 10: Add a toString method for the Freshman class
 
-		Student std1= new Student("James", 20);
-                // ToDo 11: Add a toString method for the Senior class
+		// for freshman
+		System.out.print("Enter GPA for freshman " + std1.getName() + ": ");
+		std1.setGPA(srn.nextDouble()); // stores the gpa by calling the set method
+		System.out.println(std1); // prints the toString for freshman
 
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
 
-                Senior std2 = new Student("John", 30, 90);
-
-		// ToDo 12: Set the gpa of the student using the scanner and user
-		// 			input and then print the output.
-
-		System.out.println(std1);
-
-                System.out.println(std2);
-
-		// ToDo 13: add comments and explain your code
+		//for senior
+		System.out.print("Enter GPA for senior " + std2.getName() + ": ");
+		std2.setGPA(srn.nextDouble()); // stores the gpa by calling the set method
+		System.out.println (std2); // prints the toString for senior
 
 	}
 
+
+
 }
+
+
 
